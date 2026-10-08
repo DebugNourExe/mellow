@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mellow Hotel</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <!-- icon & font-awesome & bootstrap-icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" href="assets/svg/favicon.svg" type="image/favicon.svg">
+    <!-- cdn swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- cdn fancyapps -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+            extend: {
+                "colors": { 
+                    "co-50": "#fffaeb",
+                    "co-100": "#fef0c7",
+                    "co-200": "#fde08a",
+                    "co-300": "#fcca4d",
+                    "co-400": "#fbb424",
+                    "co-500": "#f5920b",
+                    "co-600": "#d16806",
+                    "co-700": "#b44a09",
+                    "co-800": "#92390e",
+                    "co-900": "#782f0f",
+                    "co-950": "#451703",
+                    "text-main": "#1A1A1A",
+                    "text-sub": "#353535"
+                },
+                "fontFamily":{
+                    "font-main": ["Cormorant Upright", "serif"],
+                    "font-sub": ["Sora", "sans-serif"]
+                }
+            },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-font-main relative overflow-x-hidden">
+    <!-- Top Header -->
+    <div class="bg-co-50 py-[0.4rem] max-sm:hidden">
+        <div class="w-[90%] m-auto flex justify-between items-center gap-1 flex-wrap">
+            <div class="flex items-center gap-[3rem] flex-wrap max-sm:gap-1">
+                <div>
+                    <a href="#" class="flex items-center gap-[0.4rem]">
+                        <i class="fa-solid fa-phone text-co-500 text-base"></i>
+                        <span class="font-font-sub text-sm font-light text-text-main">(93) 123 456 6789</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="flex items-center gap-[0.4rem]"> 
+                        <i class="fa-regular fa-envelope text-co-500 text-base"></i>
+                        <span class="font-font-sub text-sm font-light text-text-main">yourinfo@yourmail.com</span>
+                        </a>
+                </div>
+            </div>
+            <div class="flex items-center gap-[1rem]">
+                    <a href="#" class="hover:-translate-y-1 transition-all duration-300 ease-in-out"><i class="fa-brands fa-facebook-f text-co-500 text-base"></i></a>
+                    <a href="#" class="hover:-translate-y-1 transition-all duration-300 ease-in-out"><i class="fa-brands fa-instagram text-co-500 text-base"></i></a>
+                    <a href="#" class="hover:-translate-y-1 transition-all duration-300 ease-in-out"><i class="fa-brands fa-twitter text-co-500 text-base"></i></a>
+                    <a href="#" class="hover:-translate-y-1 transition-all duration-300 ease-in-out"><i class="fa-brands fa-linkedin-in text-co-500 text-base"></i></a>
+                    <a href="#" class="hover:-translate-y-1 transition-all duration-300 ease-in-out"><i class="fa-brands fa-youtube text-co-500 text-base"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Main Header -->
+    <header class="py-[0.7rem] w-full sticky top-0 z-50 bg-white">
+        <div class="w-[90%] m-auto flex justify-between items-center flex-wrap">
+            <!-- Logo -->
+            <a href="#" class="flex items-end gap-[0.4rem]">
+                <img src="assets/images/logo.png" alt="Logo Mellow Hotel" class="w-[45px] h-auto max-sm:w-[30px]">
+                <span class="font-bold text-2xl italic uppercase text-text-main max-sm:text-base">Mellow</span>
+            </a>
+            <!-- Navigation -->
+            <nav class="max-sm:absolute max-sm:z-50 max-sm:top-[50px] max-sm:left-0 max-sm:translate-x-full max-sm:transition-transform max-sm:duration-300 max-sm:ease-in-out max-sm:w-full max-sm:h-[calc(100vh-50px)] max-sm:backdrop-blur-sm max-sm:flex max-sm:flex-col max-sm:gap-8 justify-center items-center" id="menu-mobile">
+                <ul class="flex items-center gap-[1.3rem] flex-wrap max-sm:flex-col max-sm:w-[90%]">
+                    <li class="hover:-translate-y-1 transition-all duration-300 ease-in-out max-sm:w-full"><a href="#home" class="font-font-sub text-sm hover:text-co-500 transition-all duration-300 ease-in-out justify-center items-center max-sm:flex max-sm:bg-co-100 max-sm:h-[40px]  max-sm:rounded-3xl">Home</a></li>
+                    <li class="hover:-translate-y-1 transition-all duration-300 ease-in-out max-sm:w-full"><a href="#about" class="font-font-sub text-sm hover:text-co-500 transition-all duration-300 ease-in-out justify-center items-center max-sm:flex max-sm:bg-co-100 max-sm:h-[40px]  max-sm:rounded-3xl">About Us</a></li>
+                    <li class="hover:-translate-y-1 transition-all duration-300 ease-in-out max-sm:w-full"><a href="#room" class="font-font-sub text-sm hover:text-co-500 transition-all duration-300 ease-in-out justify-center items-center max-sm:flex max-sm:bg-co-100 max-sm:h-[40px]  max-sm:rounded-3xl">Rooms</a></li>
+                    <li class="hover:-translate-y-1 transition-all duration-300 ease-in-out max-sm:w-full"><a href="#services" class="font-font-sub text-sm hover:text-co-500 transition-all duration-300 ease-in-out justify-center items-center max-sm:flex max-sm:bg-co-100 max-sm:h-[40px]  max-sm:rounded-3xl">Services</a></li>
+                    <li class="hover:-translate-y-1 transition-all duration-300 ease-in-out max-sm:w-full"><a href="#news" class="font-font-sub text-sm hover:text-co-500 transition-all duration-300 ease-in-out justify-center items-center max-sm:flex max-sm:bg-co-100 max-sm:h-[40px]  max-sm:rounded-3xl">News</a></li>
+                    <li class="hover:-translate-y-1 transition-all duration-300 ease-in-out max-sm:w-full"><a href="#contact" class="font-font-sub text-sm hover:text-co-500 transition-all duration-300 ease-in-out justify-center items-center max-sm:flex max-sm:bg-co-100 max-sm:h-[40px]  max-sm:rounded-3xl">Contact</a></li>
+                </ul>
+                <div class="hidden max-sm:flex items-center gap-2 flex-col">
+                    <div>
+                        <a href="#" class="flex items-center gap-[0.4rem]">
+                            <i class="fa-solid fa-phone text-co-500 text-base"></i>
+                            <span class="font-font-sub text-sm font-light text-text-main">(93) 123 456 6789</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="flex items-center gap-[0.4rem]"> 
+                            <i class="fa-regular fa-envelope text-co-500 text-base"></i>
+                            <span class="font-font-sub text-sm font-light text-text-main">yourinfo@yourmail.com</span>
+                            </a>
+                    </div>
+                    <div class="flex items-center gap-[1rem]">
+                    <a href="#" class="hover:-translate-y-1 transition-all duration-300 ease-in-out"><i class="fa-brands fa-facebook-f text-co-500 text-base"></i></a>
+                    <a href="#" class="hover:-translate-y-1 transition-all duration-300 ease-in-out"><i class="fa-brands fa-instagram text-co-500 text-base"></i></a>
+                    <a href="#" class="hover:-translate-y-1 transition-all duration-300 ease-in-out"><i class="fa-brands fa-twitter text-co-500 text-base"></i></a>
+                    <a href="#" class="hover:-translate-y-1 transition-all duration-300 ease-in-out"><i class="fa-brands fa-linkedin-in text-co-500 text-base"></i></a>
+                    <a href="#" class="hover:-translate-y-1 transition-all duration-300 ease-in-out"><i class="fa-brands fa-youtube text-co-500 text-base"></i></a>
+                    </div>
+                </div>
+            </nav>
+            <!-- Search -->
+            <form class="relative"  id="search-form">
+                <input type="search" placeholder="Search here..." class="bg-co-50 w-[266px] h-[48px] pl-[1.5rem] pr-[2rem] border border-solied border-gray-200 outline-none focus:outline-none focus:ring-0 focus:border-co-500 rounded-[120px] max-sm:w-[150px] max-sm:h-[35px] max-sm:pl-[1rem] max-sm:pr-[1.7rem]" id="search-input">
+                <button type="submit" class="absolute top-[50%] right-[1rem] -translate-y-[50%]"><i class="fa-solid fa-magnifying-glass text-text-main"></i></button>
+                <p id="search-message" class="hidden absolute top-[110%] left-0 w-full text-center text-sm text-red-500"></p>
+            </form>
+            <!-- btn mob -->
+            <div class="hidden max-sm:flex">
+                <button type="button" class="w-[2rem] h-[2rem] rounded-[5px] grid place-items-center border border-solied border-co-500" id="btn-mobile">
+                    <i class="fa-solid fa-bars text-co-500 text-xl" id="menu-icon"></i>
+                </button>    
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- ========== Hero Section ========== -->
+        <section id="home" class="w-full h-[calc(100vh-50px)] max-lg:h-auto py-3 flex justify-between items-center">
+            <div class="relative w-[90%] h-full max-lg:h-auto m-auto flex justify-between items-center flex-wrap max-lg:flex-col max-lg:justify-center max-lg:gap-10 rounded-3xl overflow-hidden px-16 max-xl:px-10 max-md:px-5 max-lg:py-12 max-md:py-8">
+                <!-- Background image -->
+                <img src="assets/images/shop-slo-vhztm9QC0L0-unsplash (1) 1.png" alt="Hotel room" class="absolute inset-0 w-full h-full object-cover">
+                <!-- Left: Heading + Button -->
+                <div class="relative z-10 w-[50%] max-xl:w-[55%] max-lg:w-full flex flex-col items-start max-md:items-center gap-6 max-md:text-center">
+                    <h1 class="font-medium text-6xl max-xl:text-5xl max-lg:text-4xl max-sm:text-3xl leading-tight text-text-main">
+                        Hotel Mellow Your Gateway To Serenity.
+                    </h1>
+                    <a href="#room" class="flex items-center gap-2 bg-white px-6 py-3 rounded-md shadow-sm font-font-sub text-xs font-medium text-text-main hover:bg-co-50 transition-all duration-300 ease-in-out">
+                        Explore Rooms
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Right: Check Availability Form -->
+                <div class="relative z-10 w-[35%] max-xl:w-[38%] max-lg:w-[60%] max-md:w-full bg-white rounded-2xl shadow-lg p-8 max-sm:p-5">
+                    <h2 class="font-medium text-3xl max-sm:text-2xl text-text-main mb-6">
+                        Check Availability
+                    </h2>
+                    <form action="#" method="post" id="availability-form" class="flex flex-col gap-4">
+                        <!-- Check-in -->
+                        <div>
+                            <label for="check-in" class="block mb-1.5 font-font-sub text-[11px] font-medium uppercase tracking-wider text-text-sub">
+                                Check-in
+                            </label>
+                            <div class="relative">
+                                <input type="date" id="check-in" name="check_in" lang="en" class="w-full rounded-md border border-gray-200 bg-gray-50 px-3 py-2 font-font-sub text-xs text-text-sub focus:border-co-400 focus:ring-co-400">
+                            </div>
+                        </div>
+                        <!-- Check-out -->
+                        <div>
+                            <label for="check-out" class="block mb-1.5 font-font-sub text-[11px] font-medium uppercase tracking-wider text-text-sub">
+                                Check-out
+                            </label>
+                            <div class="relative">
+                                <input type="date" id="check-out" name="check_out" lang="en" class="w-full rounded-md border border-gray-200 bg-gray-50 px-3 py-2 font-font-sub text-xs text-text-sub focus:border-co-400 focus:ring-co-400">
+                            </div>
+                        </div>
+                        <!-- Rooms -->
+                        <div>
+                            <label for="rooms" class="block mb-1.5 font-font-sub text-[11px] font-medium uppercase tracking-wider text-text-sub">
+                                Rooms
+                            </label>
+                            <select id="rooms" name="rooms" class="w-full rounded-md border border-gray-200 bg-gray-50 px-3 py-2 font-font-sub text-xs text-text-sub focus:border-co-400 focus:ring-co-400">
+                                <option>1 Room</option>
+                                <option>2 Rooms</option>
+                                <option>3 Rooms</option>
+                            </select>
+                        </div>
+                        <!-- Guests -->
+                        <div>
+                            <label for="guests" class="block mb-1.5 font-font-sub text-[11px] font-medium uppercase tracking-wider text-text-sub">
+                                Guests
+                            </label>
+                            <select id="guests" name="guests" class="w-full rounded-md border border-gray-200 bg-gray-50 px-3 py-2 font-font-sub text-xs text-text-sub focus:border-co-400 focus:ring-co-400">
+                                <option>1 Adult</option>
+                                <option selected>2 Adults</option>
+                                <option>3 Adults</option>
+                                <option>4 Adults</option>
+                            </select>
+                        </div>
+                        <!-- Submit -->
+                        <button type="submit" class="mt-2 w-full flex items-center justify-center gap-2 bg-co-50 hover:bg-co-100 transition-all duration-300 ease-in-out rounded-md py-3 font-font-sub text-xs font-medium text-text-main">
+                            Check Availability
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                        <p id="availability-message" class="hidden text-center text-xs font-font-sub mt-2"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- ========== About Section ========== -->
+        <section id="about" class="w-full py-10 max-md:py-6">
+            <div class="w-[90%] m-auto flex flex-col gap-12 max-md:gap-8">
+                <!-- Top: Title -->
+                <div class="w-full flex justify-center">
+                    <h2 class="w-[35%] max-xl:w-[45%] max-lg:w-[60%] max-md:w-full text-center font-medium text-5xl max-xl:text-4xl max-sm:text-3xl leading-tight text-text-main">
+                        Mellow: Your Gateway To Serenity
+                    </h2>
+                </div>
+                <!-- Bottom: Two columns -->
+                <div class="w-full flex justify-between items-start gap-5 max-lg:flex-col max-lg:gap-8">
+                    <!-- Left column: Text + Pool image -->
+                    <div class="w-[50%] max-lg:w-full flex flex-col gap-10 max-md:gap-6">
+                        <!-- Text block -->
+                        <div class="w-full pl-[6%] pr-[15%] max-lg:px-0 flex flex-col items-start gap-5">
+                            <p class="font-font-sub text-sm leading-relaxed text-text-sub">
+                                Welcome to Hotel Mellow, where comfort meets tranquility. Nestled in the heart of a bustling city, our hotel offers a peaceful retreat for both business and leisure travelers. With modern amenities, and a warm, inviting atmosphere, we strive to make your stay with us.
+                            </p>
+                            <a href="#" class="flex items-center gap-2 font-font-sub text-sm text-text-main hover:text-co-500 transition-all duration-300 ease-in-out">
+                                Read About Us
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                        <!-- Pool image -->
+                        <img src="assets/images/about-img1.png" alt="Hotel pool" class="w-full aspect-[16/9] object-cover rounded-2xl">
+                    </div>
+                    <!-- Right column: Bedroom image + Small image -->
+                    <div class="w-[50%] max-lg:w-full flex flex-col max-lg:flex-row max-md:justify-center max-sm:flex-col items-start gap-5">
+                        <!-- Bedroom image -->
+                        <img src="assets/images/about-img2.png" alt="Hotel bedroom" class="w-full max-lg:w-[48%] aspect-[16/9] max-lg:aspect-[4/3] max-sm:w-full object-cover rounded-2xl">
+                        <!-- Small image -->
+                        <img src="assets/images/about-img3.png" alt="Guest relaxing on bed" class="w-[55%] max-lg:w-[48%] max-sm:w-full aspect-[4/3] object-cover rounded-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== Stats Section ========== -->
+        <section class="w-full py-10 max-md:py-6">
+            <div class="w-[90%] m-auto flex justify-around items-center flex-wrap max-sm:flex-col">
+                <!-- Item -->
+                <div class="w-fit max-lg:w-[50%] max-sm:w-fit py-4 flex flex-col items-center text-center relative before:content-[''] before:absolute before:w-[35px] before:h-[35px] before:rounded-full before:bg-co-100 before:opacity-[65%] before:right-[65%] before:top-[40%] max-lg:before:right-[55%] before:-z-10">
+                    <h3 class="counter font-font-sub font-light text-5xl max-md:text-4xl text-co-600" data-target="25" data-suffix="k">0</h3>
+                    <p class="font-font-sub text-xs text-text-sub">Happy Clients</p>
+                </div>
+                <!-- Item -->
+                <div class="w-fit max-lg:w-[50%] max-sm:w-fit py-4 flex flex-col items-center text-center relative before:content-[''] before:absolute before:w-[35px] before:h-[35px] before:rounded-full before:bg-co-100 before:opacity-[65%] before:left-[70%] before:top-[15%] max-lg:before:left-[50%] before:-z-10">
+                    <h3 class="counter font-font-sub font-light text-5xl max-md:text-4xl text-co-600" data-target="160">0</h3>
+                    <p class="font-font-sub text-xs text-text-sub">Total Rooms</p>
+                </div>
+                <!-- Item -->
+                <div class="w-fit max-lg:w-[50%] max-sm:w-fit py-4 flex flex-col items-center text-center relative before:content-[''] before:absolute before:w-[35px] before:h-[35px] before:rounded-full before:bg-co-100 before:opacity-[65%] before:left-[65%] before:top-[35%] max-lg:before:left-[50%] before:-z-10">
+                    <h3 class="counter font-font-sub font-light text-5xl max-md:text-4xl text-co-600" data-target="28">0</h3>
+                    <p class="font-font-sub text-xs text-text-sub">Awards Won</p>
+                </div>
+                <!-- Item -->
+                <div class="w-fit max-lg:w-[50%] max-sm:w-fit py-4 flex flex-col items-center text-center relative before:content-[''] before:absolute before:w-[35px] before:h-[35px] before:rounded-full before:bg-co-100 before:opacity-[65%] before:right-[65%] before:top-[30%] max-lg:before:right-[55%] before:-z-10">
+                    <h3 class="counter font-font-sub font-light text-5xl max-md:text-4xl text-co-600" data-target="100">0</h3>
+                    <p class="font-font-sub text-xs text-text-sub">Team Members</p>
+                </div>
+            </div>
+        </section>
+        <!-- ========== Rooms Section (Swiper) ========== -->
+        <section id="room" class="w-full py-10 max-md:py-6">
+            <div class="w-[90%] m-auto flex flex-col gap-10 max-md:gap-6">
+                <!-- Top: Title + Button -->
+                <div class="w-full flex justify-between items-center gap-4">
+                    <h2 class="font-medium text-4xl max-md:text-3xl max-sm:text-2xl text-text-main">
+                        Explore Our Rooms
+                    </h2>
+                    <a href="#" id="explore-rooms-btn" class="flex items-center gap-2 bg-co-50 hover:bg-co-100 transition px-6 py-3 max-sm:px-4 rounded-md font-font-sub text-xs font-medium text-text-main">
+                        Explore Rooms
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Bottom: Slider + Dots -->
+                <div class="w-full flex flex-col gap-6">
+                    <div id="rooms-swiper" class="swiper w-full select-none">
+                        <div class="swiper-wrapper">
+                            <!-- Card 1 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center gap-2 text-center">
+                                    <a href="assets/images/Rectangle 641.png" data-fancybox="rooms" data-caption="Grand Deluxe Rooms - 259$ / night">
+                                        <img src="assets/images/Rectangle 641.png" alt="Grand Deluxe Rooms" draggable="false" class="w-full aspect-[5/6] object-cover rounded-2xl">
+                                    </a>
+                                    <h3 class="font-medium text-2xl text-text-main">Grand Deluxe Rooms</h3>
+                                    <span class="font-font-sub text-sm font-medium text-co-600">259$ <small class="text-[10px] font-normal text-text-sub">/ night</small></span>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center gap-2 text-center">
+                                    <a href="assets/images/Rectangle 640.avif" data-fancybox="rooms" data-caption="Grand Deluxe Rooms - 259$ / night">
+                                        <img src="assets/images/Rectangle 640.avif" alt="Sweet Family Room" draggable="false" class="w-full aspect-[5/6] object-cover rounded-2xl">
+                                    </a>
+                                    <h3 class="font-medium text-2xl text-text-main">Sweet Family Room</h3>
+                                    <span class="font-font-sub text-sm font-medium text-co-600">139$ <small class="text-[10px] font-normal text-text-sub">/ night</small></span>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center gap-2 text-center">
+                                    <a href="assets/images/Rectangle 642.png" data-fancybox="rooms" data-caption="Grand Deluxe Rooms - 259$ / night">
+                                        <img src="assets/images/Rectangle 642.png" alt="Perfect Double Room" draggable="false" class="w-full aspect-[5/6] object-cover rounded-2xl">
+                                    </a>
+                                    <h3 class="font-medium text-2xl text-text-main">Perfect Double Room</h3>
+                                    <span class="font-font-sub text-sm font-medium text-co-600">399$ <small class="text-[10px] font-normal text-text-sub">/ night</small></span>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center gap-2 text-center">
+                                    <a href="assets/images/Rectangle 639.avif" data-fancybox="rooms" data-caption="Grand Deluxe Rooms - 259$ / night">
+                                        <img  src="assets/images/Rectangle 639.avif" alt="Cozy Single Room" draggable="false" class="w-full aspect-[5/6] object-cover rounded-2xl">
+                                    </a>
+                                    <h3 class="font-medium text-2xl text-text-main">Cozy Single Room</h3>
+                                    <span class="font-font-sub text-sm font-medium text-co-600">89$ <small class="text-[10px] font-normal text-text-sub">/ night</small></span>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center gap-2 text-center">
+                                    <a href="assets/images/Rectangle 643.png" data-fancybox="rooms" data-caption="Grand Deluxe Rooms - 259$ / night">
+                                        <img src="assets/images/Rectangle 643.png" alt="Royal Suite" draggable="false" class="w-full aspect-[5/6] object-cover rounded-2xl">
+                                    </a>
+                                    <h3 class="font-medium text-2xl text-text-main">Royal Suite</h3>
+                                    <span class="font-font-sub text-sm font-medium text-co-600">599$ <small class="text-[10px] font-normal text-text-sub">/ night</small></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dots -->
+                    <div id="rooms-pagination" class="w-full flex justify-center items-center gap-3"></div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== Gallery Section (Swiper) ========== -->
+        <section class="w-full py-10 max-md:py-6">
+            <div class="w-[90%] m-auto flex flex-col gap-10 max-md:gap-6">
+                <!-- Top: Title + Text -->
+                <div class="w-full flex flex-col items-center gap-3 text-center">
+                    <h2 class="font-medium text-5xl max-md:text-4xl max-sm:text-3xl text-text-main">
+                        Our Gallery
+                    </h2>
+                    <p class="w-[60%] max-xl:w-[65%] max-lg:w-[70%] max-md:w-[95%] font-font-sub text-sm leading-relaxed text-text-sub">
+                        Explore images of our well-appointed accommodations, featuring modern amenities and stylish decor designed to make your stay a memorable one. Admire the stunning views of the city skyline from our rooftop pool, where you can relax and unwind after a day of exploring the city.
+                    </p>
+                </div>
+                <!-- Bottom: Arrows + Slider -->
+                <div class="w-full flex justify-center items-center gap-6 max-md:gap-2">
+                    <!-- Prev -->
+                    <button id="gallery-prev" type="button" aria-label="Previous image" class="shrink-0 w-12 h-12 max-sm:w-9 max-sm:h-9 flex justify-center items-center rounded-full bg-co-100 hover:bg-co-200 text-text-main transition disabled:opacity-40 disabled:cursor-not-allowed [&.swiper-button-disabled]:opacity-40">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+                    <!-- Slider -->
+                    <div id="gallery-swiper" class="swiper m-0 w-[60%] max-lg:w-[70%] max-md:w-[75%] min-w-0 select-none">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/images/Rectangle 644.png"
+                                    alt="Hotel bathroom"
+                                    draggable="false" class="w-full aspect-[16/9] object-cover rounded-2xl">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/Rectangle 646.avif" alt="Hotel room" draggable="false" class="w-full aspect-[16/9] object-cover rounded-2xl">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/Rectangle 645.avif" alt="Hotel suite" draggable="false" class="w-full aspect-[16/9] object-cover rounded-2xl">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Next -->
+                    <button id="gallery-next" type="button" aria-label="Next image" class="shrink-0 w-12 h-12 max-sm:w-9 max-sm:h-9 flex justify-center items-center rounded-full bg-co-100 hover:bg-co-200 text-text-main transition disabled:opacity-40 disabled:cursor-not-allowed [&.swiper-button-disabled]:opacity-40">
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- ========== Services Section ========== -->
+        <section id="services" data-search="services service" class="w-full py-10 max-md:py-6">
+            <div class="w-[90%] m-auto flex flex-col gap-12 max-md:gap-8">
+                <!-- Top: Title -->
+                <div class="w-full flex justify-center">
+                    <h2 class="w-[30%] max-xl:w-[40%] max-lg:w-[55%] max-md:w-[80%] max-sm:w-full text-center font-medium text-5xl max-xl:text-4xl max-sm:text-3xl leading-tight text-text-main">
+                        Our Services &amp; Facilities
+                    </h2>
+                </div>
+                <!-- Bottom: Cards -->
+                <div class="w-full flex justify-between flex-wrap gap-y-5">
+                    <!-- Card 1 -->
+                    <div class="w-[32%] max-lg:w-[49%] max-md:w-full flex flex-col items-center gap-4 text-center p-8 max-sm:p-5 rounded-xl border border-solid border-gray-100 bg-white shadow-sm hover:border-co-500 transition-all duration-300 ease-in-out">
+                        <i class="fa-solid fa-spa text-4xl text-co-500/40"></i>
+                        <h3 class="font-medium text-2xl text-text-main">Yoga &amp; Meditation</h3>
+                        <p class="font-font-sub text-[13px] leading-relaxed text-text-sub">
+                            Rejuvenate your body and mind with our yoga and meditation classes, led by experienced instructors. Whether you're a beginner or an advanced practitioner, our classes cater to all levels and offer a peaceful retreat from the hustle and bustle of the city. With serene surroundings and expert guidance.
+                        </p>
+                        <a href="#" class="service-more mt-auto flex items-center gap-1.5 font-font-sub text-xs font-medium text-text-main hover:text-co-500 transition-all duration-300 ease-in-out" data-title="Yoga & Meditation" data-description="Enjoy relaxing yoga and meditation sessions guided by experienced instructors. Our sessions are suitable for beginners and advanced guests and are designed to improve flexibility, reduce stress, and help you enjoy a calm and refreshing experience during your stay.">
+                            Read More
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-[32%] max-lg:w-[49%] max-md:w-full flex flex-col items-center gap-4 text-center p-8 max-sm:p-5 rounded-xl border border-solid border-gray-100 bg-white shadow-sm hover:border-co-500 transition-all duration-300 ease-in-out">
+                        <i class="fa-solid fa-utensils text-4xl text-co-500/40"></i>
+                        <h3 class="font-medium text-2xl text-text-main">Dining</h3>
+                        <p class="font-font-sub text-[13px] leading-relaxed text-text-sub">
+                            Indulge in a culinary journey at our on-site restaurant, where our talented chefs create exquisite dishes using locally sourced ingredients. Whether you're in the mood for a hearty breakfast, a leisurely lunch, or a romantic dinner, our restaurant offers a diverse menu to satisfy every palate.
+                        </p>
+                        <a href="#" class="service-more mt-auto flex items-center gap-1.5 font-font-sub text-xs font-medium text-text-main hover:text-co-500 transition-all duration-300 ease-in-out" data-title="Dining" data-description="Enjoy a memorable dining experience at our on-site restaurant, where our chefs prepare a variety of delicious dishes using fresh and carefully selected ingredients. From breakfast and lunch to elegant dinners, our menu offers options for different tastes in a comfortable and welcoming atmosphere.">
+                            Read More
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="w-[32%] max-lg:w-[49%] max-md:w-full flex flex-col items-center gap-4 text-center p-8 max-sm:p-5 rounded-xl border border-solid border-gray-100 bg-white shadow-sm hover:border-co-500 transition-all duration-300 ease-in-out">
+                        <i class="fa-solid fa-person-swimming text-4xl text-co-500/40"></i>
+                        <h3 class="font-medium text-2xl text-text-main">Rooftop Pool</h3>
+                        <p class="font-font-sub text-[13px] leading-relaxed text-text-sub">
+                            Relax and unwind in our rooftop pool, offering panoramic views of the city skyline. Whether you want to take a refreshing swim or soak up the sun on a lounger, our rooftop pool is the perfect place to unwind after a day of sightseeing. With poolside service available, you can enjoy your favorite drinks.
+                        </p>
+                        <a href="#" class="service-more mt-auto flex items-center gap-1.5 font-font-sub text-xs font-medium text-text-main hover:text-co-500 transition-all duration-300 ease-in-out" data-title="Rooftop Pool" data-description="Take a refreshing break at our rooftop pool while enjoying beautiful panoramic views of the city. Guests can swim, relax on comfortable loungers, or simply enjoy the peaceful atmosphere. Poolside service is also available, making it the perfect place to unwind during your stay.">
+                            Read More
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="w-[32%] max-lg:w-[49%] max-md:w-full flex flex-col items-center gap-4 text-center p-8 max-sm:p-5 rounded-xl border border-solid border-gray-100 bg-white shadow-sm hover:border-co-500 transition-all duration-300 ease-in-out">
+                        <i class="fa-solid fa-dumbbell text-4xl text-co-500/40"></i>
+                        <h3 class="font-medium text-2xl text-text-main">Fitness Center</h3>
+                        <p class="font-font-sub text-[13px] leading-relaxed text-text-sub">
+                            Stay active during your stay with us at our fitness center, equipped with state-of-the-art equipment. Whether you prefer cardio workouts or strength training, our fitness center has everything you need to maintain your fitness routine. Additionally, our fitness center offers personal training services.
+                        </p>
+                        <a href="#" class="service-more mt-auto flex items-center gap-1.5 font-font-sub text-xs font-medium text-text-main hover:text-co-500 transition-all duration-300 ease-in-out" data-title="Fitness Center" data-description="Maintain your fitness routine during your stay in our fully equipped fitness center. The facility includes modern cardio and strength-training equipment suitable for different workout levels. Guests can enjoy a clean and comfortable environment designed to support an active and healthy lifestyle.">
+                            Read More
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="w-[32%] max-lg:w-[49%] max-md:w-full flex flex-col items-center gap-4 text-center p-8 max-sm:p-5 rounded-xl border border-solid border-gray-100 bg-white shadow-sm hover:border-co-500 transition-all duration-300 ease-in-out">
+                        <i class="fa-solid fa-champagne-glasses text-4xl text-co-500/40"></i>
+                        <h3 class="font-medium text-2xl text-text-main">Event Spaces</h3>
+                        <p class="font-font-sub text-[13px] leading-relaxed text-text-sub">
+                            Host your next event or meeting at Hotel Mellow in our versatile event spaces. Our dedicated staff will ensure that every detail is taken care of, so you can focus on hosting a successful event. Additionally, our event spaces are equipped with the latest audio/visual technology to enhance your presentations.
+                        </p>
+                        <a href="#" class="service-more mt-auto flex items-center gap-1.5 font-font-sub text-xs font-medium text-text-main hover:text-co-500 transition-all duration-300 ease-in-out" data-title="Event Spaces" data-description="Host meetings, celebrations, and special occasions in our flexible event spaces. Our team can help arrange the space according to your needs, while modern audio and visual equipment supports presentations and professional events. We aim to provide a smooth and comfortable experience for both hosts and guests.">
+                            Read More
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="w-[32%] max-lg:w-[49%] max-md:w-full flex flex-col items-center gap-4 text-center p-8 max-sm:p-5 rounded-xl border border-solid border-gray-100 bg-white shadow-sm hover:border-co-500 transition-all duration-300 ease-in-out">
+                        <i class="fa-solid fa-wifi text-4xl text-co-500/40"></i>
+                        <h3 class="font-medium text-2xl text-text-main">Free Wi-Fi</h3>
+                        <p class="font-font-sub text-[13px] leading-relaxed text-text-sub">
+                            Stay connected during your stay with complimentary high-speed Wi-Fi throughout the hotel. Whether you need to catch up on work or stay in touch with loved ones, our Wi-Fi ensures that you remain connected. Additionally, our Wi-Fi network is secure and reliable, so you can browse with peace of mind.
+                        </p>
+                        <a href="#" class="service-more mt-auto flex items-center gap-1.5 font-font-sub text-xs font-medium text-text-main hover:text-co-500 transition-all duration-300 ease-in-out" data-title="Free Wi-Fi" data-description="Stay connected throughout the hotel with complimentary high-speed Wi-Fi. Whether you need to work, browse the internet, stream content, or stay in touch with family and friends, our secure and reliable network is available across guest rooms and common areas.">
+                            Read More
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="service-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/40 px-4">
+                    <div class="relative w-full max-w-lg rounded-2xl bg-white p-8 shadow-xl">
+                        <button id="service-modal-close" type="button" class="absolute right-4 top-4 w-9 h-9 flex items-center justify-center rounded-full bg-gray-100">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <h3 id="service-modal-title" class="mb-4 pr-10 text-3xl font-medium text-text-main"></h3>
+                        <p id="service-modal-description" class="font-font-sub text-sm leading-7 text-text-sub"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== Blogs & Events Section ========== -->
+        <section id="news" data-search="news articles" class="w-full py-10 max-md:py-6">
+            <div class="w-[90%] m-auto flex flex-col gap-10 max-md:gap-6">
+                <!-- Top: Title -->
+                <div class="w-full flex justify-center">
+                    <h2 class="text-center font-medium text-4xl max-md:text-3xl max-sm:text-2xl text-text-main">
+                        Our Blogs &amp; Events
+                    </h2>
+                </div>
+                <!-- Bottom: Cards -->
+                <div class="w-full flex justify-between flex-wrap gap-y-4">
+                    <!-- Card 1 -->
+                    <a href="#" class="group relative w-[32%] max-lg:w-[49%] max-md:w-full aspect-[19/20] max-lg:aspect-[4/3] flex flex-col justify-end overflow-hidden rounded-xl">
+                        <img src="assets/images/1.png" alt="A day in the life of a Hotel Mellow guest" draggable="false" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/45 to-transparent"></div>
+                        <div class="relative z-10 p-4 flex flex-col items-start gap-1.5">
+                            <span class="px-2 py-0.5 rounded-sm bg-white font-font-sub text-[10px] text-text-main">Hotels</span>
+                            <h3 class="font-medium text-xl leading-snug text-text-main">A Day In The Life Of A Hotel Mellow Guest</h3>
+                            <span class="flex items-center gap-1 font-font-sub text-[10px] text-text-sub"><i class="bi bi-clock"></i> 22 Nov, 2024</span>
+                        </div>
+                    </a>
+                    <!-- Card 2 -->
+                    <a href="#" class="group relative w-[32%] max-lg:w-[49%] max-md:w-full aspect-[19/20] max-lg:aspect-[4/3] flex flex-col justify-end overflow-hidden rounded-xl">
+                        <img src="assets/images/2.png" alt="Guide to seasonal activities in the city" draggable="false" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/45 to-transparent"></div>
+                        <div class="relative z-10 p-4 flex flex-col items-start gap-1.5">
+                            <span class="px-2 py-0.5 rounded-sm bg-white font-font-sub text-[10px] text-text-main">Activities</span>
+                            <h3 class="font-medium text-xl leading-snug text-text-main">Guide To Seasonal Activities In The City</h3>
+                            <span class="flex items-center gap-1 font-font-sub text-[10px] text-text-sub"><i class="bi bi-clock"></i> 22 Nov, 2024</span>
+                        </div>
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="#" class="group relative w-[32%] max-lg:w-[49%] max-md:w-full aspect-[19/20] max-lg:aspect-[4/3] flex flex-col justify-end overflow-hidden rounded-xl">
+                        <img src="assets/images/3.png" alt="A look inside Hotel Mellow's suites" draggable="false" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/45 to-transparent"></div>
+                        <div class="relative z-10 p-4 flex flex-col items-start gap-1.5">
+                            <span class="px-2 py-0.5 rounded-sm bg-white font-font-sub text-[10px] text-text-main">Hotels</span>
+                            <h3 class="font-medium text-xl leading-snug text-text-main">A Look Inside Hotel Mellow's Suites</h3>
+                            <span class="flex items-center gap-1 font-font-sub text-[10px] text-text-sub"><i class="bi bi-clock"></i> 22 Nov, 2024</span>
+                        </div>
+                    </a>
+                    <!-- Card 4 (wide) -->
+                    <a href="#" class="group relative w-[66%] max-lg:w-full max-lg:order-first max-lg:aspect-[2/1] max-md:aspect-[4/3] flex flex-col justify-end overflow-hidden rounded-xl">
+                        <img src="assets/images/4.png" alt="Why Hotel Mellow is the perfect staycation destination" draggable="false" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/45 to-transparent"></div>
+                        <div class="relative z-10 p-4 flex flex-col items-start gap-1.5">
+                            <span class="px-2 py-0.5 rounded-sm bg-white font-font-sub text-[10px] text-text-main">Hotels</span>
+                            <h3 class="font-medium text-xl leading-snug text-text-main">Why Hotel Mellow Is The Perfect Staycation Destination</h3>
+                            <span class="flex items-center gap-1 font-font-sub text-[10px] text-text-sub"><i class="bi bi-clock"></i> 22 Nov, 2024</span>
+                        </div>
+                    </a>
+                    <!-- Card 5 -->
+                    <a href="#" class="group relative w-[32%] max-lg:w-[49%] max-md:w-full aspect-[19/20] max-lg:aspect-[4/3] flex flex-col justify-end overflow-hidden rounded-xl">
+                        <img src="assets/images/5.png" alt="The benefits of booking directly with Hotel Mellow" draggable="false" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/45 to-transparent"></div>
+                        <div class="relative z-10 p-4 flex flex-col items-start gap-1.5">
+                            <span class="px-2 py-0.5 rounded-sm bg-white font-font-sub text-[10px] text-text-main">Hotels</span>
+                            <h3 class="font-medium text-xl leading-snug text-text-main">The Benefits Of Booking Directly With Hotel Mellow</h3>
+                            <span class="flex items-center gap-1 font-font-sub text-[10px] text-text-sub"><i class="bi bi-clock"></i> 22 Nov, 2024</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ========== Footer ========== -->
+    <footer id="contact" class="w-full">
+        <div class="w-[90%] m-auto flex flex-col">
+            <!-- Top: Brand / Newsletter / Info -->
+            <div class="w-full flex justify-between flex-wrap gap-y-10 py-12 max-md:py-8">
+                <!-- Brand -->
+                <div class="w-[30%] max-lg:w-full max-md:w-full flex flex-col items-start gap-4">
+                    <a href="#" class="flex items-end gap-[0.4rem]">
+                        <img src="assets/images/logo.png" alt="Logo Mellow Hotel" class="w-[40px] h-auto">
+                        <span class="font-bold text-xl italic uppercase text-text-main">Mellow</span>
+                    </a>
+                    <p class="w-[90%] max-lg:w-[80%] max-md:w-full font-font-sub text-xs leading-relaxed text-text-sub">
+                        Welcome to Hotel Mellow, where comfort meets tranquility. Nestled in the heart of a bustling city, our hotel offers a peaceful retreat for both business and leisure travelers.
+                    </p>
+                </div>
+                <!-- Newsletter -->
+                <div class="w-[26%] max-lg:w-[55%] max-md:w-full flex flex-col gap-3">
+                    <h3 class="font-medium text-2xl max-sm:text-xl text-text-main">Join Our Newsletter</h3>
+                    <p class="font-font-sub text-xs text-text-sub">Sign up to our newsletter to receive latest news.</p>
+                    <form id="newsletter-form" class="w-full flex flex-col gap-3 mt-1" novalidate>
+                        <div class="w-full">
+                            <input type="text" id="newsletter-first-name" name="first_name" placeholder="First Name" aria-label="First Name" autocomplete="given-name" class="w-full rounded-md border border-gray-200 bg-white px-3 py-2.5 font-font-sub text-xs text-text-sub focus:border-co-500 focus:ring-co-500">
+                            <p id="first-name-error" class="hidden mt-1 text-xs text-red-500" role="alert"></p>
+                        </div>
+                        <div class="w-full">
+                            <input type="text" id="newsletter-last-name" name="last_name" placeholder="Last Name" aria-label="Last Name" autocomplete="family-name" class="w-full rounded-md border border-gray-200 bg-white px-3 py-2.5 font-font-sub text-xs text-text-sub focus:border-co-500 focus:ring-co-500">
+                            <p id="last-name-error" class="hidden mt-1 text-xs text-red-500" role="alert"></p>
+                        </div>
+                        <div class="w-full">
+                            <input type="email" id="newsletter-email" name="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email" class="w-full rounded-md border border-gray-200 bg-white px-3 py-2.5 font-font-sub text-xs text-text-sub focus:border-co-500 focus:ring-co-500">
+                            <p id="email-error" class="hidden mt-1 text-xs text-red-500" role="alert"></p>
+                        </div>
+                        <button type="submit" class="w-full flex items-center justify-center gap-2 bg-co-50 hover:bg-co-100 transition rounded-md py-3 font-font-sub text-xs font-medium text-text-main">
+                            Subscribe Newsletter
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                        <p id="newsletter-message" class="hidden text-xs text-center mt-2" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+                <!-- Info + Social -->
+                <div class="w-[22%] max-lg:w-[35%] max-md:w-full flex flex-col gap-8">
+                    <div class="flex flex-col gap-4">
+                        <h3 class="font-medium text-2xl max-sm:text-xl text-text-main">Our Info</h3>
+                        <ul class="flex flex-col gap-3 font-font-sub text-xs text-text-sub">
+                            <li class="flex items-start gap-3">
+                                <i class="bi bi-geo-alt text-co-500"></i>
+                                <span>
+                                    Mellow Hotel &amp; Resort<br>
+                                    123 Serenity Avenue<br>
+                                    Tranquil City, Peaceful State<br>
+                                    Relaxingland
+                                </span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="bi bi-telephone text-co-500"></i>
+                                <a href="tel:+651234566789" class="hover:text-co-600 transition">(65) 123 456 6789</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="bi bi-envelope text-co-500"></i>
+                                <a href="mailto:yourinfo@yourmail.com" class="text-co-600 hover:underline">yourinfo@yourmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="font-medium text-2xl max-sm:text-xl text-text-main">Social Share</h3>
+                        <div class="flex items-center gap-5 text-sm text-co-500">
+                            <a href="#" aria-label="Facebook" class="hover:text-co-700 transition"><i class="bi bi-facebook"></i></a>
+                            <a href="#" aria-label="Instagram" class="hover:text-co-700 transition"><i class="bi bi-instagram"></i></a>
+                            <a href="#" aria-label="Twitter" class="hover:text-co-700 transition"><i class="bi bi-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn" class="hover:text-co-700 transition"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" aria-label="YouTube" class="hover:text-co-700 transition"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom: Links + Copyright -->
+            <div class="w-full flex justify-between flex-wrap gap-y-8 py-10 max-md:py-8 border-t border-solid border-gray-200">
+                <ul class="w-[30%] max-lg:w-[48%] flex flex-col gap-2 font-font-sub text-xs text-text-main">
+                    <li><a href="#home" class="hover:text-co-600 transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-co-600 transition">About Us</a></li>
+                    <li><a href="#room" class="hover:text-co-600 transition">Our Rooms</a></li>
+                    <li><a href="#services" class="hover:text-co-600 transition">Services</a></li>
+                    <li><a href="#news" class="hover:text-co-600 transition">News</a></li>
+                    <li><a href="#contact" class="hover:text-co-600 transition">Contact</a></li>
+                </ul>
+                <ul class="w-[26%] max-lg:w-[48%] flex flex-col gap-2 font-font-sub text-xs text-text-main">
+                    <li><a href="#" class="hover:text-co-600 transition">Blog</a></li>
+                    <li><a href="#" class="hover:text-co-600 transition">Offers</a></li>
+                    <li><a href="#" class="hover:text-co-600 transition">Meals</a></li>
+                    <li><a href="#" class="hover:text-co-600 transition">Services</a></li>
+                    <li><a href="#" class="hover:text-co-600 transition">News</a></li>
+                    <li><a href="#" class="hover:text-co-600 transition">Terms &amp; Conditions</a></li>
+                </ul>
+                <p class="w-[22%] max-lg:w-full font-font-sub text-[11px] leading-relaxed text-text-sub">
+                    &copy; Copyright <span id="copyright-year"></span> Hotel Mellow<br>
+                    Template by <a href="#" class="font-semibold text-text-main hover:underline">TemplatesJungle</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

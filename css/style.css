@@ -1,0 +1,18 @@
+ body,html{
+    width: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+input::placeholder{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #353535;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/* nav.open{
+    left: 0 !important;
+} */
